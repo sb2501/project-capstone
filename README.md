@@ -7,14 +7,6 @@ Current Docker Hub image
 How to use Dockerfile
 ----------------------------
 
-apt-get commands that we added to the RabbitMQ dockerfile
-```bash
-apt-get install python
-apt-get install python-pip
-apt-get install ffmpeg
-pip install pika
-```
-
 ### Build docker image (while in the directory)
 
 ```bash
