@@ -7,7 +7,15 @@ Current Docker Hub image
 How to use Dockerfile
 ----------------------------
 
-### Build docker image (while in the directory)
+### Build docker master node image (while in the directory)
+
+To build the master node, the IP address of the master computer passes in environment variable when building consumer
+
+```bash
+docker --build-arg MASTER_IP=[MASTER_COMPUTER_IP] .
+```
+
+###Build docker consumer node image (while in the directory)
 
 ```bash
 docker build .
@@ -96,8 +104,6 @@ rabbitmqctl purge_queue vids
 
 Description:
 ----------------------------
-Passing in environment variable when building consumer
-docker --build-arg MASTER_IP=10.11.131.243 .
 
 Running a new file
 ```bash
