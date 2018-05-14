@@ -9,16 +9,16 @@ How to use Dockerfile
 
 ### Build docker master node image (while in the directory)
 
-To build the master node, the IP address of the master computer passes in environment variable when building consumer
-
 ```bash
-docker --build-arg MASTER_IP=[MASTER_COMPUTER_IP] .
+docker .
 ```
 
-###Build docker consumer node image (while in the directory)
+### Build docker consumer node image (while in the directory)
+
+To build the consumer node, the IP address of the master is passed in as an environment variable when building consumer
 
 ```bash
-docker build .
+docker build --build-arg MASTER_IP=[MASTER_COMPUTER_IP] .
 ```
 
 ### Running containers
